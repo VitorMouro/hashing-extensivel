@@ -17,7 +17,7 @@ public:
     std::vector<std::string> getPseudochaves() const;
     uint getProfundidadeLocal() const;
     void clear();
-    bool Insere(std::string);
-    void IncrementaProfundidadeLocal();
+    bool insere(std::string);
+    void incrementaProfundidadeLocal();
 };
 

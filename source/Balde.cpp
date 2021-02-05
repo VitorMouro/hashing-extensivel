@@ -23,7 +23,7 @@ uint Balde::getProfundidadeLocal() const
     return m_profundidade_local;
 }
 
-bool Balde::Insere(std::string pseudochave)
+bool Balde::insere(std::string pseudochave)
 {
     if (m_pseudochaves.size() < m_tamanho)
     {
@@ -38,7 +38,7 @@ void Balde::clear()
     m_pseudochaves.clear();
 }
 
-void Balde::IncrementaProfundidadeLocal()
+void Balde::incrementaProfundidadeLocal()
 {
     m_profundidade_local++;
 }

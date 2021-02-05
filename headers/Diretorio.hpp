@@ -11,13 +11,13 @@ private:
     uint m_tamanho_balde;
     uint m_bits_pseudochave;
     std::vector<std::shared_ptr<Balde>> m_baldes;
-    bool InserePseudochave(std::string pseudochave);
+    bool inserePseudochave(std::string pseudochave);
+    void duplicaBalde(uint index);
+    void duplicaDiretorio();
+    std::string Hash(uint k);
 public:
     Diretorio(uint tamanho_balde, uint bits_pseudochave);
     virtual ~Diretorio();
-    std::string Hash(uint k);
-    bool Insere(uint k);
-    bool Busca(uint k);
-    void DuplicaBalde(uint index);
-    void DuplicaDiretorio();
+    bool insere(uint k);
+    bool busca(uint k);
 };

@@ -11,9 +11,16 @@ int main(int argc, char const *argv[])
     std::cout << "Digite o número de bits a ser usado para as pseudo-chaves (B): ";
     std::cin >> b;
     Diretorio d(m, b);
-    d.Insere(100);
-    d.Insere(200);
-    d.Insere(500);
-    d.Insere(1000);
+    d.insere(0);
+    d.insere(1);
+    d.insere(2);
+    d.insere(3);
+    d.insere(4);
+    d.insere(5);
+    d.insere(6);
+    d.insere(7);
+    d.insere(8);
+    d.insere(9);
+    d.insere(10);
     return 0;
 }
