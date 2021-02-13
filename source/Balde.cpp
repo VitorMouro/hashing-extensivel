@@ -1,4 +1,5 @@
 #include "Balde.hpp"
+#include <iostream>
 
 Balde::Balde(uint tamanho, uint profundidade_local) : m_tamanho(tamanho), m_profundidade_local(profundidade_local)
 {
@@ -41,4 +42,12 @@ void Balde::clear()
 void Balde::incrementaProfundidadeLocal()
 {
     m_profundidade_local++;
+}
+
+bool Balde::busca(std::string pseudochave)
+{
+    for (auto pc : m_pseudochaves)
+        if (pc == pseudochave)
+            return true;
+    return false;
 }
