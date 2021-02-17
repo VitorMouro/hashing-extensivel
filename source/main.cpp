@@ -31,14 +31,14 @@ int main(int argc, char const *argv[])
     std::cout << "Digite o número de bits a ser usado para as pseudo-chaves (B): ";
     std::cin >> b;
 
-    int n = 1000000;
+    int n = 100000;
 
     // Teste pseudochaves aleatórias com mesmo padrão de bits
-    Diretorio d1(m, b);
     unsigned long long time = 0;
     long double fatorCarga = 0;
     for (int j = 0; j < 10; j++)
     {
+        Diretorio d1(m, b);
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now(), end;
         for (int i = 0; i < n; i++)
         {
@@ -53,11 +53,11 @@ int main(int argc, char const *argv[])
     std::cout << "\tFator de Carga Média (10 iterações): " << fatorCarga/10 << std::endl;
     
     // Teste pseudochaves iniciadas com mesmo padrão de bits
-    Diretorio d2(m, b);
     time = 0;
     fatorCarga = 0;
     for (int j = 0; j < 10; j++)
     {
+        Diretorio d2(m, b);
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now(), end;
         begin = std::chrono::steady_clock::now();
         for (int i = 0; i < n; i++)

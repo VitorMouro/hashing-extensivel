@@ -14,7 +14,7 @@ private:
     uint m_bits_pseudochave;
     std::vector<std::shared_ptr<Balde>> m_baldes;
     bool duplicaBalde(uint index);
-    void duplicaDiretorio();
+    bool duplicaDiretorio();
 public:
     Diretorio(uint tamanho_balde, uint bits_pseudochave);
     virtual ~Diretorio();
